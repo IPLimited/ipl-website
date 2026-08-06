@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Служебные файлы индексировать не нужно
+Disallow: /data/
+Disallow: /server.mjs
+Disallow: /update-rates.mjs
+
+Sitemap: https://industrialpartners.hk/sitemap.xml

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">IPL — Industrial Partners Limited</title>
+    <meta name="description" data-i18n-attr="content:meta.description" content="Industrial Partners Limited — управление жизненным циклом горно-шахтной и карьерной техники в Центральной Азии." />
+
+    <!-- Иконки сайта -->
+    <link rel="icon" href="./favicon.ico" sizes="32x32" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta name="theme-color" content="#0e0e0e" />
+
+    <link rel="canonical" href="https://industrialpartners.hk/" />
+
+    <!-- Превью ссылки в мессенджерах и соцсетях -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Industrial Partners Limited" />
+    <meta property="og:title" content="IPL — Industrial Partners Limited" />
+    <meta property="og:description" content="Lifecycle management of underground and open-pit mining machinery in Central Asia. Rebuild, genuine parts supply and technical service." />
+    <meta property="og:url" content="https://industrialpartners.hk/" />
+    <meta property="og:image" content="https://industrialpartners.hk/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="zh_HK" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IPL — Industrial Partners Limited" />
+    <meta name="twitter:description" content="Lifecycle management of underground and open-pit mining machinery in Central Asia." />
+    <meta name="twitter:image" content="https://industrialpartners.hk/og-image.png" />
+
+    <link rel="stylesheet" href="./assets/fonts.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./ipl.css" />
+  </head>
+  <body>
+    <!-- ===== Строка котировок ===== -->
+    <div class="quotes" id="quotes" role="region" data-i18n-attr="aria-label:quotes.region">
+      <div class="quotes__inner">
+        <div class="quotes__list" id="quotesList">
+          <div class="quote" data-quote="usdkzt">
+            <span class="quote__label" data-i18n="quotes.usdkzt">USD/KZT</span>
+            <span class="quote__value" data-quote-value>—</span>
+            <span class="quote__delta" data-quote-delta></span>
+          </div>
+          <div class="quote" data-quote="gold">
+            <span class="quote__label" data-i18n="quotes.gold">Золото</span>
+            <span class="quote__value" data-quote-value>—</span>
+            <span class="quote__delta" data-quote-delta></span>
+          </div>
+          <div class="quote" data-quote="copper">
+            <span class="quote__label" data-i18n="quotes.copper">Медь</span>
+            <span class="quote__value" data-quote-value>—</span>
+            <span class="quote__delta" data-quote-delta></span>
+          </div>
+        </div>
+        <div class="quotes__meta">
+          <span class="quotes__sources" data-i18n="quotes.sources">НБ РК · LBMA · LME</span>
+          <span class="quotes__date" id="quotesDate"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-shell">
+      <header class="hero" id="top">
+        <div class="hero__media" aria-hidden="true">
+          <video
+            class="hero__video"
+            id="heroVideo"
+            data-lazy-video
+            src="./assets/videos/0S.mp4"
+            poster="./assets/hero-poster.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            fetchpriority="high"
+          ></video>
+          <div class="hero__video-overlay"></div>
+        </div>
+
+        <div class="hero__frame">
+          <div class="topbar">
+            <a class="brand" href="#top" aria-label="IPL — Industrial Partners Limited">
+              <span class="brand__logo" aria-hidden="true">
+                <svg viewBox="0 0 215 100" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                  <path fill="currentColor" fill-rule="evenodd" d="M3 0H14A3 3 0 0 1 17 3V97A3 3 0 0 1 14 100H3A3 3 0 0 1 0 97V3A3 3 0 0 1 3 0Z" />
+                  <path fill="currentColor" fill-rule="evenodd" d="M39 0H111A3 3 0 0 1 114 3V52A3 3 0 0 1 111 55H56A3 3 0 0 0 53 58V97A3 3 0 0 1 50 100H39A3 3 0 0 1 36 97V3A3 3 0 0 1 39 0ZM53 17H94A3 3 0 0 1 97 20V35A3 3 0 0 1 94 38H53V17Z" />
+                  <path fill="currentColor" fill-rule="evenodd" d="M136 0H147A3 3 0 0 1 150 3V80A3 3 0 0 0 153 83H212A3 3 0 0 1 215 86V97A3 3 0 0 1 212 100H136A3 3 0 0 1 133 97V3A3 3 0 0 1 136 0Z" />
+                </svg>
+              </span>
+              <span class="brand__stack" aria-hidden="true">
+                <span>industrial</span>
+                <span>partners</span>
+                <span>limited</span>
+              </span>
+            </a>
+
+            <nav class="nav" data-i18n-attr="aria-label:nav.region">
+              <a href="#services" data-i18n="nav.services">Услуги</a>
+              <a href="#catalog" data-i18n="nav.catalog">Каталог</a>
+              <a href="#partner" data-i18n="nav.partner">Партнерство</a>
+              <a href="#facility" data-i18n="nav.facility">Производство</a>
+              <a href="#about" data-i18n="nav.about">О нас</a>
+              <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+            </nav>
+
+            <details class="lang-switch" id="langSwitch">
+              <summary class="lang-switch__trigger" data-i18n-attr="aria-label:lang.switch">
+                <span data-lang-current>RUS</span>
+                <span class="lang-switch__arrow" aria-hidden="true">⌄</span>
+              </summary>
+              <nav class="lang-switch__menu" data-i18n-attr="aria-label:lang.choose">
+                <a href="#top" data-set-lang="ru">RUS</a>
+                <a href="#top" data-set-lang="en">ENG</a>
+                <a href="#top" data-set-lang="zh">繁中</a>
+              </nav>
+            </details>
+          </div>
+
+          <div class="hero__content reveal">
+            <h1 data-i18n-html="hero.title">
+              Управление жизненным
+              <br />
+              циклом горно&#8209;шахтной
+              <br />
+              и карьерной техники
+              <br />
+              в Центральной Азии
+            </h1>
+          </div>
+
+          <p class="hero__subtitle" data-i18n="hero.subtitle">
+            Central Asia — Industrial Partners
+          </p>
+        </div>
+
+        <div class="hero-tabs reveal">
+          <a class="hero-tab" href="#services" data-hero-program="0">
+            <span class="hero-tab__title">RE:BUILT</span>
+            <span class="hero-tab__copy" data-i18n="tab.rebuilt">Программа восстановления техники и компонентов + обменные программы</span>
+            <span class="hero-tab__arrow" aria-hidden="true">↘</span>
+          </a>
+          <a class="hero-tab" href="#services" data-hero-program="1">
+            <span class="hero-tab__title">PARTS:TO</span>
+            <span class="hero-tab__copy" data-i18n="tab.partsto">Интегрированные поставки оригинальных запчастей от ведущих производителей</span>
+            <span class="hero-tab__arrow" aria-hidden="true">↘</span>
+          </a>
+          <a class="hero-tab" href="#services" data-hero-program="2">
+            <span class="hero-tab__title">PRO:SERVICE</span>
+            <span class="hero-tab__copy" data-i18n="tab.proservice">Техническое сопровождение, ремонт и сервисная поддержка</span>
+            <span class="hero-tab__arrow" aria-hidden="true">↘</span>
+          </a>
+          <a class="hero-tab" href="#catalog" data-hero-program="3">
+            <span class="hero-tab__title">IPL Machinery</span>
+            <span class="hero-tab__copy" data-i18n="tab.machinery">Собственная линейка погрузочно-доставочных машин</span>
+            <span class="hero-tab__arrow" aria-hidden="true">↘</span>
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section class="mission section section--dark" id="about">
+          <div class="frame mission__frame">
+            <div class="section-marker" data-i18n="mark.about">01 / Обращение</div>
+            <div class="section-close" aria-hidden="true"></div>
+
+            <div class="mission__grid">
+              <figure class="mission__visual reveal">
+                <img
+                  src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+                  data-src="./assets/mission-engine.webp"
+                  data-i18n-attr="alt:mission.alt"
+                  alt="Силовой агрегат IPL"
+                  width="1334"
+                  height="926"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </figure>
+
+              <div class="mission__content reveal">
+                <blockquote data-i18n="mission.quote">
+                  «Мы верим, что местное восстановление техники – не только
+                  экономически оправданное решение, но и важный шаг в развитии
+                  локальной индустрии, снижении зависимости от импорта и более
+                  ответственном использовании промышленного оборудования.
+                </blockquote>
+
+                <div class="mission__support">
+                  <div class="mission__signature">
+                    <span class="mission__signature-role" data-i18n="mission.signature">Руководство IPL</span>
+                  </div>
+
+                  <p class="mission__note" data-i18n="mission.note">
+                    Наше главное преимущество – сочетание современной
+                    производственной базы с сильной командой инженеров и
+                    опытных технических специалистов-практиков»
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scroll-band" aria-hidden="true">
+            <div class="scroll-band__track">
+              CENTRAL ASIA — INDUSTRIAL PARTNERS
+              <span></span>
+              CENTRAL ASIA — INDUSTRIAL PARTNERS
+              <span></span>
+              CENTRAL ASIA — INDUSTRIAL PARTNERS
+            </div>
+          </div>
+        </section>
+
+        <section class="program section section--dark" id="services">
+          <div class="program__panel reveal">
+            <p class="section-marker section-marker--light" data-i18n="mark.services">02 / УСЛУГИ</p>
+            <h2 class="program__title" id="programTitle">RE:BUILT</h2>
+
+            <div class="program__divider" aria-hidden="true">
+              <span>×</span>
+            </div>
+
+            <p class="program__lead" id="programLead">
+              Программа восстановления техники и компонентов
+              + обменные программы
+            </p>
+
+            <p class="program__copy" id="programCopy">
+              Комплексное восстановление с возвратом оригинальных технических
+              характеристик, глубокая инженерная работа с узлами. Обновление
+              до последних заводских параметров с контролем допусков и
+              остаточного ресурса.
+            </p>
+
+            <div class="program__tabs" role="tablist" data-i18n-attr="aria-label:programs.region">
+              <button class="program-tab is-active" type="button" data-program="0">
+                <span>01</span>
+                <span>RE:BUILT</span>
+              </button>
+              <button class="program-tab" type="button" data-program="1">
+                <span>02</span>
+                <span>PARTS:TO</span>
+              </button>
+              <button class="program-tab" type="button" data-program="2">
+                <span>03</span>
+                <span>PRO:SERVICE</span>
+              </button>
+            </div>
+
+            <a class="program__cta" href="#contacts">
+              <span data-i18n="cta.consult">Получить консультацию</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="program__visual reveal" id="programVisual" data-variant="program">
+            <video
+              id="programMedia"
+              class="program__media"
+              data-lazy-video
+              data-src="./assets/videos/2-1S.mp4"
+              poster="./assets/program-poster.jpg"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="none"
+              aria-hidden="true"
+            ></video>
+          </div>
+        </section>
+
+        <section class="restoration section section--light">
+          <div class="frame restoration__frame">
+            <div class="restoration__grid">
+              <div class="reveal">
+                <p class="section-marker section-marker--dark" data-i18n="mark.advantages">03 / ПРЕИМУЩЕСТВА</p>
+                <h2 class="section-title section-title--accent" data-i18n="rest.title">
+                  Осуществляем восстановление
+                </h2>
+                <p class="restoration__lede" data-i18n="rest.lede">
+                  Техники и компонентов для оборудования Caterpillar, Epiroc,
+                  Sandvik и других производителей
+                </p>
+              </div>
+
+              <div class="reveal">
+                <p class="restoration__copy" data-i18n="rest.copy1">
+                  Через международное партнерство, центры ремануфактуринга по
+                  всему миру и собственные обменные программы IPL обеспечивает
+                  доступ к новым и восстановленным узлам.
+                </p>
+                <p class="restoration__copy" data-i18n="rest.copy2">
+                  Это сокращает сроки поставок, снижает простои и даёт
+                  экономически обоснованную альтернативу заводским каналам, что
+                  особенно важно для условий горнодобывающей отрасли Центральной Азии.
+                </p>
+                <p class="restoration__accent" data-i18n="rest.accent">IPL ближе и доступнее.</p>
+              </div>
+            </div>
+
+            <div class="brand-strip reveal" data-i18n-attr="aria-label:brands.region">
+              <div class="brand-strip__item">
+                <span class="brand-strip__marker" aria-hidden="true"></span>
+                <span class="brand-strip__logo brand-strip__logo--caterpillar">
+                  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="./assets/brand-caterpillar.webp" alt="Caterpillar" width="1024" height="492" decoding="async" loading="lazy" />
+                </span>
+              </div>
+              <div class="brand-strip__item">
+                <span class="brand-strip__marker" aria-hidden="true"></span>
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="./assets/brand-epiroc.webp" alt="Epiroc" width="1280" height="346" decoding="async" loading="lazy" />
+              </div>
+              <div class="brand-strip__item">
+                <span class="brand-strip__marker" aria-hidden="true"></span>
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="./assets/brand-sandvik.webp" alt="Sandvik" width="1280" height="232" decoding="async" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="catalog section section--dark" id="catalog">
+          <div class="frame catalog__frame">
+            <div class="catalog__head reveal">
+              <div>
+                <p class="section-marker section-marker--light" data-i18n="mark.machinery">04 / ТЕХНИКА</p>
+                <h2 class="section-title">IPL Machinery</h2>
+              </div>
+
+              <a class="outline-button" href="#catalog">
+                <span aria-hidden="true">→</span>
+                <span data-i18n="cta.catalog">Весь каталог</span>
+              </a>
+            </div>
+
+            <div class="catalog__stage reveal" data-catalog-stage data-catalog-slide="0">
+              <div
+                class="catalog__machine"
+                role="img"
+                aria-label="IPL Machinery CM L5D"
+                data-catalog-machine
+              ></div>
+
+              <div class="catalog__info">
+                <p class="catalog__intro" data-i18n="catalog.intro">
+                  Флагманское направление компании IPL, производственно-логистическая
+                  платформа с офисом в Гонконге и инженерными мощностями в Азии
+                </p>
+
+                <p class="catalog__copy" data-catalog-copy>
+                  Погрузочно-доставочная машина (ПДМ) грузоподъёмностью 5 тонн,
+                  разработанная для подземных работ и широкого спектра задач: проходка,
+                  добыча и строительство тоннелей сечением от 3.0 × 3.0 м. Машина
+                  оснащена двигателем Cummins 5.9 с максимальным крутящим моментом
+                  650 Н·м.
+                  <br /><br />
+                  Трансмиссия на базе компонентов Dana (коробка передач и
+                  гидротрансформатор) обеспечивает стабильную работу и высокую
+                  эффективность эксплуатации.
+                </p>
+
+                <a class="solid-button" href="#contacts">
+                  <span aria-hidden="true">→</span>
+                  <span data-i18n="cta.request">Оставить заявку</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="catalog__tabs reveal" role="group" data-i18n-attr="aria-label:models.region">
+              <button class="catalog-tab is-active" type="button" data-catalog-tab="0" aria-pressed="true">
+                <span>CM L5D</span>
+                <small data-i18n="cap.5">Грузоподъёмность 5 тонн</small>
+              </button>
+              <button class="catalog-tab" type="button" data-catalog-tab="1" aria-pressed="false">
+                <span>CM L7D</span>
+                <small data-i18n="cap.7">Грузоподъёмность 7 тонн</small>
+              </button>
+              <button class="catalog-tab" type="button" data-catalog-tab="2" aria-pressed="false">
+                <span>CM L10D</span>
+                <small data-i18n="cap.10">Грузоподъёмность 10 тонн</small>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="partner section section--light" id="partner">
+          <div class="frame partner__frame">
+            <div class="partner__grid">
+              <div class="reveal">
+                <p class="section-marker section-marker--dark" data-i18n="mark.partner">05 / ПАРТНЕРСТВО</p>
+                <h2 class="section-title section-title--accent" data-i18n="partner.title">
+                  IPL Machinery также является официальным дилером брендов
+                </h2>
+              </div>
+
+              <div class="reveal">
+                <p class="partner__copy" data-i18n="partner.copy">
+                  IPL обеспечивает доступ не только к новым и восстановленным
+                  узлам, но и к новой технике передовых компаний.
+                </p>
+              </div>
+            </div>
+
+            <div class="brand-strip reveal" data-i18n-attr="aria-label:brands.region">
+              <div class="brand-strip__item">
+                <span class="brand-strip__marker" aria-hidden="true"></span>
+                <span class="brand-strip__logo brand-strip__logo--caterpillar">
+                  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="./assets/brand-caterpillar.webp" alt="Caterpillar" width="1024" height="492" decoding="async" loading="lazy" />
+                </span>
+              </div>
+              <div class="brand-strip__item">
+                <span class="brand-strip__marker" aria-hidden="true"></span>
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="./assets/brand-epiroc.webp" alt="Epiroc" width="1280" height="346" decoding="async" loading="lazy" />
+              </div>
+              <div class="brand-strip__item">
+                <span class="brand-strip__marker" aria-hidden="true"></span>
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="./assets/brand-sandvik.webp" alt="Sandvik" width="1280" height="232" decoding="async" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="facility section section--dark" id="facility">
+          <div class="facility__backdrop">
+            <div class="facility__media" aria-hidden="true">
+              <video
+                class="facility__video"
+                data-lazy-video
+                data-src="./assets/videos/7S.mp4"
+                poster="./assets/facility-poster.jpg"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="none"
+              ></video>
+            </div>
+
+            <div class="frame facility__content facility__content--solo reveal">
+              <div class="facility__info">
+                <span class="facility__label" data-i18n="facility.label">МЕСТОНАХОЖДЕНИЕ</span>
+                <strong class="facility__area">6057,5 m2</strong>
+                <p data-i18n="facility.copy">
+                  Совместно с казахстанским партнером организовали сервисный
+                  центр в городе Караганда на 6057,5 квадратных метров
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer section section--dark" id="contacts">
+        <div class="frame footer__frame">
+          <div class="footer__panel reveal">
+            <img
+              class="footer__shell"
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+              data-src="./assets/footer-shell.png"
+              alt=""
+              aria-hidden="true"
+              width="1376"
+              height="803"
+              decoding="async"
+              loading="lazy"
+            />
+
+            <div class="footer__ribbon" aria-hidden="true">
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="./assets/footer-ribbon.svg" alt="" width="1575" height="150" decoding="async" loading="lazy" />
+            </div>
+
+            <div class="footer__topmark" aria-label="IPL">
+              <svg viewBox="0 0 215 100" focusable="false" aria-hidden="true">
+                <path fill="currentColor" fill-rule="evenodd" d="M3 0H14A3 3 0 0 1 17 3V97A3 3 0 0 1 14 100H3A3 3 0 0 1 0 97V3A3 3 0 0 1 3 0Z" />
+                <path fill="currentColor" fill-rule="evenodd" d="M39 0H111A3 3 0 0 1 114 3V52A3 3 0 0 1 111 55H56A3 3 0 0 0 53 58V97A3 3 0 0 1 50 100H39A3 3 0 0 1 36 97V3A3 3 0 0 1 39 0ZM53 17H94A3 3 0 0 1 97 20V35A3 3 0 0 1 94 38H53V17Z" />
+                <path fill="currentColor" fill-rule="evenodd" d="M136 0H147A3 3 0 0 1 150 3V80A3 3 0 0 0 153 83H212A3 3 0 0 1 215 86V97A3 3 0 0 1 212 100H136A3 3 0 0 1 133 97V3A3 3 0 0 1 136 0Z" />
+              </svg>
+            </div>
+
+            <div class="footer__brand-copy">
+              <span>industrial</span>
+              <span>partners</span>
+              <span>limited</span>
+            </div>
+
+            <div class="footer__nav">
+              <span class="footer__heading" data-i18n="footer.about">О сайте</span>
+              <a href="#services" data-i18n="nav.services">Услуги</a>
+              <a href="#catalog" data-i18n="nav.catalog">Каталог</a>
+              <a href="#partner" data-i18n="nav.partner">Партнерство</a>
+              <a href="#facility" data-i18n="nav.facility">Производство</a>
+              <a href="#about" data-i18n="nav.about">О нас</a>
+              <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+            </div>
+
+            <div class="footer__media">
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="./assets/footer-engine.webp" data-i18n-attr="alt:footer.engineAlt" alt="Двигатель IPL" width="1334" height="926" decoding="async" loading="lazy" />
+            </div>
+
+            <div class="footer__catalogs">
+              <span class="footer__heading" data-i18n="footer.catalogs">Каталоги</span>
+              <a href="#catalog" data-i18n="footer.cat1">Оригинальные запасные части</a>
+              <a href="#catalog" data-i18n="footer.cat2">Восстановленные компоненты</a>
+              <a href="#catalog" data-i18n="footer.cat3">Запчасти</a>
+              <a href="#catalog" data-i18n="footer.cat4">Обменный фонд</a>
+            </div>
+
+            <div class="footer__contacts">
+              <p>
+                <span data-i18n="footer.address">Адрес:</span><br />
+                <span class="footer__address">Units A-C, 25/F, Seabright Plaza, No. 9-23 Shell Street, North Point, Hong Kong</span>
+              </p>
+              <p>
+                <span data-i18n="footer.email">E-mail:</span><br /><a href="mailto:info@industrialpartners.hk">info@industrialpartners.hk</a>
+              </p>
+            </div>
+
+            <div class="footer__copyright" data-i18n="footer.copyright">© 2026 IPL / Все права защищены.</div>
+
+            <div class="footer__mark" aria-hidden="true">
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="./assets/footer-mark.svg" alt="" width="106" height="50" decoding="async" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="footer__legal">
+            <span data-i18n="footer.returns">Условия возврата</span>
+            <span data-i18n="footer.privacy">Политика конфиденциальности</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./data/rates.js"></script>
+    <script src="./i18n.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

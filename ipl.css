@@ -1,0 +1,272 @@
+/* ==========================================================================
+   IPL — надстройка над styles.css
+   Здесь только то, чего не было на исходном сайте:
+   строка котировок, логотип IPL, поддержка китайского.
+   Базовые стили в styles.css не тронуты.
+   ========================================================================== */
+
+/* ---------------------------------------------- строка котировок ------- */
+
+.quotes {
+  position: relative;
+  z-index: 5;
+  background: var(--bg-0);
+  border-bottom: 1px solid var(--line);
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.quotes.is-empty {
+  display: none;
+}
+
+.quotes__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: var(--frame);
+  margin-inline: auto;
+  padding: 11px 0;
+}
+
+.quotes__list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  min-width: 0;
+}
+
+.quote {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.quote.is-missing {
+  display: none;
+}
+
+.quote__label {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+}
+
+.quote__value {
+  color: var(--paper-strong);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.quote__delta {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.quote__delta.is-up {
+  color: #4caf7d;
+}
+
+.quote__delta.is-down {
+  color: var(--accent);
+}
+
+.quote__delta.is-flat {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.quotes__meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.quotes__date {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Планшет: источники прячем, котировки оставляем. */
+@media (max-width: 1100px) {
+  .quotes__list {
+    gap: 24px;
+  }
+
+  .quotes__sources {
+    display: none;
+  }
+}
+
+/* Телефон: строка прокручивается по горизонтали, ничего не обрезается. */
+@media (max-width: 640px) {
+  .quotes__inner {
+    gap: 0;
+    padding: 9px 0;
+  }
+
+  .quotes__list {
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .quotes__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .quotes__meta {
+    display: none;
+  }
+
+  .quote__label {
+    font-size: 9px;
+  }
+}
+
+/* ------------------------------------------------- логотип IPL --------- */
+
+.brand__logo {
+  display: block;
+  flex: none;
+  width: 54px;
+  margin-top: 1px;
+  color: currentColor;
+}
+
+.brand__logo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.footer__topmark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Телефонная шапка: логотип чуть компактнее. */
+@media (max-width: 640px) {
+  .brand__logo {
+    width: 44px;
+  }
+}
+
+/* ------------------------------------------- контакты в подвале ------- */
+
+/* В оригинале здесь было два коротких поля (телефон и почта).
+   У IPL добавился почтовый адрес Гонконга — блоку нужно больше места,
+   иначе он выходит за нижний край панели. */
+/* «Каталоги» и «Адрес» ставим на одну вертикальную ось: одинаковые
+   right и width — значит совпадают и левый край, и центр. Раньше
+   отступы справа отличались (136px против 168px) и блоки разъезжались.
+   Ось сдвинута левее знака в правом нижнем углу (он начинается с
+   x≈1075), чтобы длинный адрес не задевал его. */
+.footer__catalogs,
+.footer__contacts {
+  right: 170px;
+  width: 228px;
+}
+
+.footer__contacts {
+  top: 484px;
+  gap: 10px;
+}
+
+.footer__address {
+  display: block;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* Исходный сайт запрещал переносы в контактах для англоязычной версии —
+   многострочному адресу это мешает. Ширину здесь не задаём: она общая
+   с блоком «Каталоги», иначе колонки снова разъедутся. */
+html[lang="en"] .footer__contacts p,
+html[lang="zh-Hant"] .footer__contacts p {
+  white-space: normal;
+}
+
+@media (max-width: 920px) {
+  .footer__contacts {
+    top: auto;
+    right: auto;
+    width: min(280px, 90%);
+  }
+}
+
+/* --------------------------- раздел «Производство» без блока адреса ---- */
+
+.facility__content--solo .facility__info {
+  max-width: 560px;
+}
+
+/* ------------------- заголовки разделов 03 и 05: защита от наложения --- */
+
+/* В этих двух разделах левая и правая колонки физически перекрываются
+   (заголовок занимает до 673px, текст справа начинается с 590px и 620px).
+   В русском заголовки короче и до чужой колонки не доставали, а в EN и
+   китайском — доставали и наезжали на чёрный текст. Ограничиваем ширину
+   заголовка: русская версия не меняется, остальные переносятся на строку. */
+.restoration__grid .section-title {
+  max-width: 520px;
+}
+
+.partner__grid .section-title {
+  max-width: 560px;
+}
+
+/* На узких экранах колонки идут друг под другом — ограничение не нужно. */
+@media (max-width: 1100px) {
+  .restoration__grid .section-title,
+  .partner__grid .section-title {
+    max-width: none;
+  }
+}
+
+/* ------------------------------------ традиционный китайский (Гонконг) - */
+
+/* Латиница остаётся в фирменных шрифтах, иероглифы подхватывает
+   ближайший системный CJK-шрифт — так подписи выглядят цельно. */
+html[lang="zh-Hant"] body {
+  font-family: "Roboto Mono", "Noto Sans HK", "PingFang HK",
+    "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+}
+
+html[lang="zh-Hant"] h1,
+html[lang="zh-Hant"] h2,
+html[lang="zh-Hant"] .section-title,
+html[lang="zh-Hant"] .program__title,
+html[lang="zh-Hant"] .facility__area,
+html[lang="zh-Hant"] .brand__mark,
+html[lang="zh-Hant"] .lang-switch {
+  font-family: "Orbitron", "Noto Sans HK", "PingFang HK",
+    "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+}
+
+/* Иероглифы шире латиницы — заголовок первого экрана слегка уменьшаем,
+   чтобы он остался в три строки, как в остальных языках. */
+html[lang="zh-Hant"] .hero__content h1 {
+  font-size: clamp(32px, 4vw, 58px);
+  letter-spacing: 0.02em;
+  line-height: 1.28;
+}
+
+/* В CJK разрядка между знаками читается плохо — убираем её там,
+   где в макете она задана для латиницы. */
+html[lang="zh-Hant"] .section-marker,
+html[lang="zh-Hant"] .facility__label,
+html[lang="zh-Hant"] .footer__heading,
+html[lang="zh-Hant"] .hero-tab__copy {
+  letter-spacing: 0.06em;
+}
