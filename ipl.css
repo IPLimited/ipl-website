@@ -171,22 +171,36 @@
    right и width — значит совпадают и левый край, и центр. Раньше
    отступы справа отличались (136px против 168px) и блоки разъезжались.
    Ось сдвинута левее знака в правом нижнем углу (он начинается с
-   x≈1075), чтобы длинный адрес не задевал его. */
-.footer__catalogs,
-.footer__contacts {
-  right: 170px;
-  width: 228px;
-}
+   x≈1075), чтобы длинный адрес не задевал его.
 
-.footer__contacts {
-  top: 484px;
-  gap: 10px;
+   ВАЖНО: только для десктопа. На планшете и телефоне у styles.css
+   своя раскладка подвала (grid и absolute с другими координатами) —
+   эти правила туда просачивались и клали адрес поверх логотипа IPL. */
+@media (min-width: 921px) {
+  .footer__catalogs,
+  .footer__contacts {
+    right: 170px;
+    width: 228px;
+  }
+
+  .footer__contacts {
+    top: 484px;
+    gap: 10px;
+  }
 }
 
 .footer__address {
   display: block;
   font-size: 12.5px;
   line-height: 1.5;
+}
+
+/* Телефонный подвал: блок контактов с адресом выше исходных двух строк,
+   приподнимаем его, чтобы не заезжал на фото двигателя (top: 510px). */
+@media (max-width: 640px) {
+  .footer__contacts {
+    top: 390px;
+  }
 }
 
 /* Исходный сайт запрещал переносы в контактах для англоязычной версии —
@@ -197,11 +211,48 @@ html[lang="zh-Hant"] .footer__contacts p {
   white-space: normal;
 }
 
-@media (max-width: 920px) {
-  .footer__contacts {
-    top: auto;
-    right: auto;
-    width: min(280px, 90%);
+/* --------------------- раздел 04 «Техника» на телефоне ----------------- */
+
+/* Оригинальный сайт на ширине до 640px прятал весь блок с машиной
+   (display: none) — оставались только карточки-кнопки моделей, и нажатия
+   ни к чему не вели. Включаем блок обратно в простой вертикальной
+   раскладке: фото машины → описание → кнопка, ниже — переключатели. */
+@media (max-width: 640px) {
+  .catalog__stage {
+    display: block;
+    position: static;
+    height: auto;
+    min-height: 0;
+  }
+
+  /* Фото вписываем целиком, без растяжения (на десктопе картинка
+     жёстко натянута на бокс 1003x920 — здесь это исказило бы её). */
+  .catalog__machine {
+    position: static;
+    width: 100%;
+    height: 240px;
+    background-size: contain;
+    background-position: center bottom;
+  }
+
+  .catalog__info {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .catalog__intro {
+    max-width: none;
+  }
+
+  .catalog__copy {
+    max-width: none;
+    margin-top: 14px;
+  }
+
+  .catalog__info .solid-button {
+    margin-top: 20px;
   }
 }
 
