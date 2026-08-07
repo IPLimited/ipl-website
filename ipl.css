@@ -240,9 +240,12 @@ html[lang="zh-Hant"] .footer__contacts p {
    картинку растягивало 100%/100% и резало низ). Планшету тоже нужно:
    там бокс 720x360 исказил бы пропорции 1003x920 ещё сильнее. */
 @media (max-width: 920px) {
+  /* Прижато к правому краю, как на десктопе: фото машин намеренно
+     обрезаны справа («выезжают» из-за кромки экрана), и по центру
+     этот обрез читается как дефект. У правого края он прячется. */
   .catalog__stage[data-catalog-slide] .catalog__machine {
     background-size: contain;
-    background-position: center bottom;
+    background-position: right bottom;
   }
 }
 
@@ -298,7 +301,7 @@ html[lang="zh-Hant"] .footer__contacts p {
   .catalog__machine {
     position: static;
     width: 100%;
-    height: 240px;
+    height: 280px;
   }
 
   /* Стейдж на телефоне растянут на всю ширину экрана — тексту нужны
@@ -306,17 +309,18 @@ html[lang="zh-Hant"] .footer__contacts p {
   .catalog__info {
     position: static;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 16px;
     padding: 0 24px;
   }
 
   .catalog__intro {
     max-width: none;
+    margin-bottom: 24px;
   }
 
   .catalog__copy {
     max-width: none;
-    margin-top: 14px;
+    margin-top: 0;
   }
 
   .catalog__info .solid-button {
