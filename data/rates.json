@@ -1,17 +1,17 @@
 {
-  "date": "2026-08-29",
-  "updatedAt": "2026-08-29T17:05:12.753Z",
+  "date": "2026-08-30",
+  "updatedAt": "2026-08-30T17:05:27.661Z",
   "items": {
     "usdkzt": {
       "value": 464.77,
       "changePct": 0,
-      "date": "2026-08-30",
+      "date": "2026-08-31",
       "source": "Национальный банк РК"
     },
     "gold": {
-      "value": 4568.95,
-      "changePct": -1.35,
-      "date": "2026-08-27",
+      "value": 4562.75,
+      "changePct": -0.14,
+      "date": "2026-08-28",
       "source": "LBMA Gold Price PM"
     },
     "copper": {
