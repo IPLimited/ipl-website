@@ -1,12 +1,12 @@
 /* Создаётся автоматически: node update-rates.mjs — вручную не править. */
 window.IPL_RATES = {
-  "date": "2026-09-13",
-  "updatedAt": "2026-09-13T19:11:50.266Z",
+  "date": "2026-09-14",
+  "updatedAt": "2026-09-14T20:45:04.111Z",
   "items": {
     "usdkzt": {
-      "value": 450.91,
-      "changePct": 0,
-      "date": "2026-09-14",
+      "value": 447.8,
+      "changePct": -0.69,
+      "date": "2026-09-15",
       "source": "Национальный банк РК"
     },
     "gold": {
