@@ -1,23 +1,23 @@
 {
-  "date": "2026-09-24",
-  "updatedAt": "2026-09-24T20:16:02.530Z",
+  "date": "2026-09-25",
+  "updatedAt": "2026-09-25T20:15:39.178Z",
   "items": {
     "usdkzt": {
-      "value": 441.89,
-      "changePct": -0.84,
-      "date": "2026-09-25",
+      "value": 441.88,
+      "changePct": 0,
+      "date": "2026-09-26",
       "source": "Национальный банк РК"
     },
     "gold": {
-      "value": 4284.45,
-      "changePct": -1.04,
-      "date": "2026-09-23",
+      "value": 4266.4,
+      "changePct": -0.42,
+      "date": "2026-09-24",
       "source": "LBMA Gold Price PM"
     },
     "copper": {
-      "value": 14735,
-      "changePct": -0.42,
-      "date": "2026-09-23",
+      "value": 14765,
+      "changePct": 0.2,
+      "date": "2026-09-24",
       "source": "LME Copper Cash-Settlement"
     }
   }
