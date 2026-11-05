@@ -1,12 +1,12 @@
 /* Создаётся автоматически: node update-rates.mjs — вручную не править. */
 window.IPL_RATES = {
-  "date": "2026-11-04",
-  "updatedAt": "2026-11-04T22:24:57.127Z",
+  "date": "2026-11-05",
+  "updatedAt": "2026-11-05T22:32:37.087Z",
   "items": {
     "usdkzt": {
-      "value": 452.91,
-      "changePct": -0.08,
-      "date": "2026-11-05",
+      "value": 451.87,
+      "changePct": -0.23,
+      "date": "2026-11-06",
       "source": "Национальный банк РК"
     },
     "gold": {
@@ -16,9 +16,9 @@ window.IPL_RATES = {
       "source": "LBMA Gold Price PM"
     },
     "copper": {
-      "value": 14110.5,
-      "changePct": -1.87,
-      "date": "2026-11-03",
+      "value": 14201,
+      "changePct": 0.64,
+      "date": "2026-11-04",
       "source": "LME Copper Cash-Settlement"
     }
   }
